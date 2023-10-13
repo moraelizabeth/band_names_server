@@ -20,6 +20,11 @@
             console.log('Disconnected from server');
         });
 
+        socket.emit('message', {name: 'Eli'});
+
+        socket.on('message', function(payload){
+            console.log('Listening', payload);
+        });
     </script>
 </body>
 </html>
